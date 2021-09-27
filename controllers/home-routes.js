@@ -48,5 +48,25 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+// Render the personal page.  If the user is logged in, redirect to the home page.
+router.get('/personal', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+ }
+
+ res.render('personal');
+});
+
+// Render the stats page.  If the user is logged in, redirect to the home page.
+router.get('/stats', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+ }
+
+ res.render('stats');
+});
+
 module.exports = router;
 

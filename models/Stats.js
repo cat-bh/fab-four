@@ -25,16 +25,16 @@ Stats.init(
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        calorie_intake: {
+        calories_intake: {
             type: DataTypes.INTEGER
         },
         water: {
             type: DataTypes.INTEGER
         },
-        date: {
+        /* date: {
             type: DataTypes.DATE,
             allowNull: false
-        },
+        }, */
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -46,9 +46,11 @@ Stats.init(
     },
     {
         sequelize,
-        timestamps: false,
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
         modelName: 'stats'
     }
 )
+
+module.exports = Stats;
