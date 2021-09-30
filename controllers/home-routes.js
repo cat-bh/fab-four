@@ -50,7 +50,7 @@ router.get('/signup', (req, res) => {
 
 // Render the personal page.  If the user is logged in, redirect to the home page.
 router.get('/personal', (req, res) => {
-  if (req.session.loggedIn) {
+  if (!req.session.loggedIn) {
     res.redirect('/');
     return;
  }
@@ -60,7 +60,7 @@ router.get('/personal', (req, res) => {
 
 // Render the stats page.  If the user is logged in, redirect to the home page.
 router.get('/stats', (req, res) => {
-  if (req.session.loggedIn) {
+  if (!req.session.loggedIn) {
     res.redirect('/');
     return;
  }

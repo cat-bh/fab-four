@@ -5,30 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>fab_fitness</title>
+  <link rel="stylesheet" href="/css/pure/pure-min.css">
+  <link rel="stylesheet" href="/css/pure/grids-responsive-min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-        <nav>
-          <a href="/">Fabulously Fit</a>
-          <span><a href="/personal">Create Personal Data</a></span>
-          <span><a href="/stats">Create Stats Data</a></span>
-          <span><a href="/signup">signup</a></span> 
+
+  <div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+
+      <div class="content-wrapper">
+        <div class="content">
+          <a href="/" class="pure-menu-heading">Fabulously Fit</a>
+          <span class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></span>
+          <span class="pure-menu-item"><a href="/personal" class="pure-menu-link">Create Personal Data</a></span>
+          <span class="pure-menu-item"><a href="/stats" class="pure-menu-link">Create Stats Data</a></span>
+          <span class="pure-menu-item"><a href="/signup" class="pure-menu-link">signup</a></span>
           {{#if loggedIn}}
-          <button id="logout" class="btn-no-style">logout</button>
+          <button id="logout" class="pure-button">logout</button>
           {{else}}
-          <a href="/login">login</a>
+          <a href="/login" class="pure-button">login</a>
           {{/if}}
-        </nav>
-    </header>
-    <main>
-      {{{ body }}}
-    </main>
-    <footer>
-      Thanks for visiting!
-    </footer>
+        </div>
+      </div>
+      <main>
+        {{{ body }}}
+      </main>
+      <footer class="footer l-box is-center">
+        Thanks for visiting!
+      </footer>
+    </div>
   </div>
 
   {{#if loggedIn}}
@@ -38,4 +45,3 @@
 </body>
 
 </html>
-

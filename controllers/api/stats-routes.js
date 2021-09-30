@@ -5,7 +5,7 @@ const router = require('express').Router();
 const { User, Post, Comment, Personal, Stats } = require('../../models');
 // Express Session for the session data
 const session = require('express-session');
-// Authorization Helper
+// Authorization  Helper
 const withAuth = require('../../utils/auth');
 // Sequelize store to save the session so the user can remain logged in
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
