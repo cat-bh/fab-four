@@ -1,8 +1,10 @@
 # Fabulous Fitness Pal, 10/03/21
 
-By Fabulous Four 
+### By Fabulous Four 
 
-Description
+## Description
+
+A health and fitness tracking app, designed to be user friendly. A single place for all your fitness needs!
 
 ## Features
 
