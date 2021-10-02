@@ -2,6 +2,7 @@ Fabulous Fitness Pal, 10/03/21
 By Fabulous Four 
 
 Description
+
 ##Features
 
 Users can add new Items to the site through the form feature.
@@ -24,16 +25,16 @@ Support and contact details
 Please email us for further questions at jordanabravo2009@yahoo.com
 
 Technologies Used
-HTML
-JavaScript
-Pure CSS
-Node.js
-Express.js
-Handlebars.js
-MySQL2
-Sequelize ORM
-dotenv
-Deploy using HEROKU
+- HTML
+- JavaScript
+- Pure CSS
+- Node.js
+- Express.js
+- Handlebars.js
+- MySQL2
+- Sequelize ORM
+- dotenv
+- Deploy using HEROKU
 
 
 Contribution Guidlines
