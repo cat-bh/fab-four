@@ -60,7 +60,7 @@ router.post('/', (req, res) => {
   Personal.create({
     weight: req.body.weight,
     goal_weight: req.body.goal_weight,
-    user_id: req.body.user_id
+    user_id: req.session.user_id
   })
     // send the user data back to the client as confirmation and save the session
     .then(dbPersonalData => {
@@ -69,6 +69,7 @@ router.post('/', (req, res) => {
         req.session.weight = dbPersonalData.weight;
         req.session.goal_weight = dbPersonalData.goal_weight;
         req.session.user_id = dbPersonalData.user_id;
+        req.session.loggedIn = true;
     
         res.json(dbPersonalData);
       });

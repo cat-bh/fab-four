@@ -4,7 +4,6 @@ async function personalFormHandler(event) {
     // get the information from the sign up form
     const weight = document.querySelector('#weight').value.trim();
     const goal_weight = document.querySelector('#goal_weight').value.trim();
-    const user_id = document.querySelector('#user_id').value.trim();
     
 
     // if all three fields have content
@@ -15,13 +14,13 @@ async function personalFormHandler(event) {
             body: JSON.stringify({
                 weight,
                 goal_weight,
-                user_id
             }),
             headers: {'Content-Type': 'application/json'}
         });
         // when the fetch promise is fufilled, check the response status and convey the results
         if (response.ok) {
-            alert('Personal data created');
+            //alert('Personal data created');
+            location.href = "personaldetails/";
         } else {
             alert(response.statusText)
         }

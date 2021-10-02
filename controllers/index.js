@@ -8,6 +8,11 @@ const apiRoutes = require('./api');
 // Homepage routes
 const homeRoutes = require('./home-routes.js');
 
+// Stats Details Routes
+const statsDetailsRoutes = require('./statsdetails-routes');
+
+// Personal Details Routes
+const personalDetailsRoutes = require('./personaldetails-routes');
 
  // Dashboard Routes
 // const dashboardRoutes = require('./dashboard-routes.js');
@@ -17,6 +22,10 @@ router.use('/api', apiRoutes);
 
 // Define the path for the home page
 router.use('/', homeRoutes);
+// Define the path for the home page
+router.use('/statsdetails', statsDetailsRoutes);
+// Define the path for the home page
+router.use('/personaldetails', personalDetailsRoutes);
 
 // Define the path for the dashboard
 // router.use('/dashboard', dashboardRoutes);

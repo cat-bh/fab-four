@@ -7,7 +7,6 @@ async function statsFormHandler(event) {
     const calories_burned = document.querySelector('#calories_burned').value.trim();
     const calories_intake = document.querySelector('#calories_intake').value.trim();
     const water = document.querySelector('#water').value.trim();
-    const user_id = document.querySelector('#user_id').value.trim();
     
 
     // if all three fields have content
@@ -20,14 +19,14 @@ async function statsFormHandler(event) {
                 distance,
                 calories_burned,
                 calories_intake,
-                water,
-                user_id
+                water
             }),
             headers: {'Content-Type': 'application/json'}
         });
         // when the fetch promise is fufilled, check the response status and convey the results
         if (response.ok) {
-            alert('Stats data created');
+            //alert('Stats data created');
+            location.href = "statsdetails/";
         } else {
             alert(response.statusText)
         }

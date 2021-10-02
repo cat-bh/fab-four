@@ -19,7 +19,7 @@ async function signupFormHandler(event) {
         });
         // when the fetch promise is fufilled, check the response status and convey the results
         if (response.ok) {
-            alert('Account created! Logging you in now.');
+            //alert('Account created! Logging you in now.');
         } else {
             alert(response.statusText)
         }

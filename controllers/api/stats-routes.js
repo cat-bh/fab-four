@@ -12,14 +12,20 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // Routes
 
-// GET /api/stats -- get all personal data
+// GET /api/stats -- get all stats data
 router.get('/', (req, res) => {
     // Access the Personal model and run .findAll() method to get all users
     Stats.findAll({
-        
+        where: {
+            // use id as the parameter for the request
+            user_id: req.params.user_id
+          },
     })
       // return the data as JSON formatted
-      .then(dbStatsData => res.json(dbStatsData))
+      .then(dbStatsData => {
+      const stats = dbStatsData.map(stat => stat.get({ plain: true }));
+      res.render('stats', {dbStatsData, loggedIn: true});
+})
       // if there is a server error, return that error
       .catch(err => {
         console.log(err);
@@ -63,7 +69,7 @@ router.post('/', (req, res) => {
     calories_burned: req.body.calories_burned,
     calories_intake: req.body.calories_intake,
     water: req.body.water,
-    user_id: req.body.user_id
+    user_id: req.session.user_id
   })
     // send the user data back to the client as confirmation and save the session
     .then(dbStatsData => {
@@ -75,6 +81,7 @@ router.post('/', (req, res) => {
         req.session.calories_intake = dbStatsData.calories_intake;
         req.session.water = dbStatsData.water;
         req.session.user_id = dbStatsData.user_id;
+        req.session.loggedIn = true;
     
         res.json(dbStatsData);
       });
