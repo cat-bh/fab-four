@@ -22,17 +22,6 @@ Users can add images to there posts.
 
 Users can costumize there post to the fullest.
 
-## Setup/Installation Requirements
-
-- Clone this repository.
-- Open both repositories in your terminal.
-- Install and run the pip env for python/django apps.
-- Command line: python manage.py runserver to get the app up and running.
-- Navigate to the localhosted sight on port 8000.
-
-## Known Bugs
-It turns out that although heroku stores the image files temporarily in there db it is not something that they store long term so I am switching back to links.
-
 Support and contact details
 Please email us for further questions at jordanabravo2009@yahoo.com
 
