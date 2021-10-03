@@ -23,7 +23,9 @@
           <span class="pure-menu-item"><a href="/personaldetails/" class="pure-menu-link">Get Personal Details</a></span>
           <span class="pure-menu-item"><a href="/stats" class="pure-menu-link">Create Stats Data</a></span>
           <span class="pure-menu-item"><a href="/statsdetails/" class="pure-menu-link">Get Stats Details</a></span>
+          {{#unless loggedIn}}
           <span class="pure-menu-item"><a href="/signup" class="pure-menu-link">signup</a></span>
+          {{/unless}}
           {{#if loggedIn}}
           <button id="logout" class="pure-button">logout</button>
           {{else}}
