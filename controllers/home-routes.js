@@ -55,7 +55,7 @@ router.get('/personal', (req, res) => {
     return;
  }
 
- res.render('personal');
+ res.render('personal', {loggedIn: req.session.loggedIn});
 });
 
 // Render the stats page.  If the user is logged in, redirect to the home page.
@@ -65,7 +65,7 @@ router.get('/stats', (req, res) => {
     return;
  }
 
- res.render('stats');
+ res.render('stats', {loggedIn: req.session.loggedIn});
 });
 
 module.exports = router;

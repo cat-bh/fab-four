@@ -20,6 +20,7 @@ async function signupFormHandler(event) {
         // when the fetch promise is fufilled, check the response status and convey the results
         if (response.ok) {
             //alert('Account created! Logging you in now.');
+            document.location.replace('/personal');
         } else {
             alert(response.statusText)
         }
