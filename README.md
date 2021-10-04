@@ -1,5 +1,4 @@
-![image](https://user-images.githubusercontent.com/83687540/135814091-26fcdf30-a238-4718-afe1-2eb7d7a0c8b4.png)
-
+![image](https://user-images.githubusercontent.com/83687540/135814842-96c9c626-053b-4454-940e-d1db6eb67b0a.png)
 
 # Fabulous Fitness Pal, 10/03/21
 
