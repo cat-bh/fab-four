@@ -1,0 +1,10 @@
+<section>
+  <h2>Your Personal Details</h2>
+  <ol class="pure-control-group">
+    {{#each personals as |personal|}}
+    <li>
+      {{> personal-info personal}}
+    </li>
+    {{/each}}
+  </ol>
+</section>

@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="/css/style.css">
+
+<ul class="pure-menu-list">
+  {{#each users as |user|}}
+  <li class="pure-menu-item">
+    {{> user-info user}}
+  </li>
+  {{/each}}
+</ul>

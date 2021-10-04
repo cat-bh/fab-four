@@ -1,0 +1,11 @@
+
+<section>
+  <h2>Your Stats</h2>
+  <ol>
+    {{#each stats as |stat|}}
+    <li>
+      {{> stats-info stat}}
+    </li>
+    {{/each}}
+  </ol>
+</section>
