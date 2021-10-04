@@ -3,12 +3,8 @@
 const router = require('express').Router();
 // User, Post, Vote models
 const { User, Post, Comment } = require('../../models');
-// Express Session for the session data
-const session = require('express-session');
 // Authorization Helper
 const withAuth = require('../../utils/auth');
-// Sequelize store to save the session so the user can remain logged in
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // Routes
 
@@ -86,13 +82,13 @@ router.post('/login',  (req, res) => {
     // expects {username: 'lernantino@gmail.com', password: 'password1234'}
     User.findOne({
         where: {
-        username: req.body.username
+          username: req.body.username
         }
     }).then(dbUserData => {
         // if the email is not found, return an error
         if (!dbUserData) {
-        res.status(400).json({ message: 'No user with that email address!' });
-        return;
+          res.status(400).json({ message: 'No user with that email address!' });
+          return;
         }
         // Otherwise, verify the user.
         // call the instance method as defined in the User model
